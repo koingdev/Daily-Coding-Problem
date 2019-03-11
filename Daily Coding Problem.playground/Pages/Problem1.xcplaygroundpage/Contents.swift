@@ -19,6 +19,7 @@ extension Array where Element == Int {
 		
 		for number in self {
 			let target = k - number
+			// Found ?
 			if cache.contains(target) {
 				return true
 			} else {
@@ -32,13 +33,13 @@ extension Array where Element == Int {
 
 }
 
-[].hasSumEqual(to: 3) 						// false
-[1, 2, 3, 4].hasSumEqual(to: 3) 			// true
-[0, 1, 2, 3, 5].hasSumEqual(to: 1) 			// true
-[10, 11, 33, 0, -1, 8].hasSumEqual(to: 9) 	// true
-[0, 0, 0, 0, 1].hasSumEqual(to: 2) 			// false
-[1, 2, 3, 4].hasSumEqual(to: 3) 			// true
-[0, 1, 2, 3].hasSumEqual(to: 1) 			// true
-[10, 3, 33, 0, -1, 8].hasSumEqual(to: 9) 	// true
-[0, 0, 0, 0, 1].hasSumEqual(to: 2) 			// false
-[0, 0, 0].hasSumEqual(to: 0)				// true
+[].hasSumEqual(to: 3)							// false
+[1, 2, 3, 4].hasSumEqual(to: 3)					// true
+[0, 1, 2, 3, 5].hasSumEqual(to: 1) 				// true
+[10, 11, 33, 0, -1, 8].hasSumEqual(to: 9) 		// true
+[0, 0, 0, 0, 1].hasSumEqual(to: 2) 				// false
+[1, 2, 3, 4].hasSumEqual(to: 3) 				// true
+[0, 1, 2, 3].hasSumEqual(to: 1) 				// true
+[10, 3, 33, 0, -1, 8].hasSumEqual(to: 9) 		// true
+[0, 0, 0, 0, 1].hasSumEqual(to: 2) 				// false
+[0, 0, 0].hasSumEqual(to: 0)					// true
