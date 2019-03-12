@@ -1,5 +1,6 @@
 # Daily Coding Problem
-Here is my daily Swift solution for https://dailycodingproblem.com 🤩<br>
+Here is my daily Swift solution for https://dailycodingproblem.com 🤩
+
 Feel free to create a new issue for your question or suggestion 😎
 
 ## Problem 1
@@ -13,4 +14,4 @@ Bonus: Can you do this in one pass?
 
 ### Solution
 
-[Problem1.Swift](Solutions/Problem1.swift)
+[TwoSum.Swift](Solutions/Problem1/TwoSum.swift)
