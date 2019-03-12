@@ -24,3 +24,6 @@ xcshareddata
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
+
+## Playground
+timeline.xctimeline
