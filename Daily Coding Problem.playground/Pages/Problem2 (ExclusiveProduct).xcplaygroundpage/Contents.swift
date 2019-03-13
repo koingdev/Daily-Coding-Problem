@@ -10,12 +10,6 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 Follow-up: what if you can't use division?
 */
 
-
-#warning("TODO: Without using division")
-func exclusiveProduct(of input: [Int]) -> [Int] {
-	return []
-}
-
 func exclusiveProductUsingDivision(of input: [Int]) -> [Int] {
 	
 	var result = [Int]()
@@ -32,6 +26,33 @@ func exclusiveProductUsingDivision(of input: [Int]) -> [Int] {
 	return result
 }
 
-// Using division
 exclusiveProductUsingDivision(of: [1, 2, 3, 4, 5])
 exclusiveProductUsingDivision(of: [3, 2, 1])
+
+func exclusiveProduct(of input: [Int]) -> [Int] {
+	var result = [Int]()
+	// Store the product of everything to the left of input[i]
+	var left = Array(repeating: 1, count: input.count)
+	// Store the product of everything to the right of input[i]
+	var right = Array(repeating: 1, count: input.count)
+	
+	// Compute all product of everything to the left of `i`
+	for i in 1 ..< input.count {
+		left[i] = left[i - 1] * input[i - 1]
+	}
+	
+	// Compute all product of everything to the right of `i`
+	for i in (0 ... input.count - 2).reversed() {
+		right[i] = right[i + 1] * input[i + 1]
+	}
+	
+	// Left * Right
+	for i in 0 ..< input.count {
+		result.append(left[i] * right[i])
+	}
+	
+	return result
+}
+
+exclusiveProduct(of: [1, 2, 3, 4, 5])
+exclusiveProduct(of: [3, 2, 1])
