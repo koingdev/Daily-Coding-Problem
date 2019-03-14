@@ -3,5 +3,6 @@
     <pages>
         <page name='Problem1 (TwoSum)'/>
         <page name='Problem2 (ExclusiveProduct)'/>
+        <page name='Problem3 (SerializeBinaryTree)'/>
     </pages>
 </playground>
