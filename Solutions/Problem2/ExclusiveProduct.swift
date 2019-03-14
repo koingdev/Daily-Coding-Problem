@@ -31,19 +31,16 @@ exclusiveProductUsingDivision(of: [3, 2, 1])
 
 func exclusiveProduct(of input: [Int]) -> [Int] {
 	var result = [Int]()
-	// Store the product of everything to the left of input[i]
 	var left = Array(repeating: 1, count: input.count)
-	// Store the product of everything to the right of input[i]
 	var right = Array(repeating: 1, count: input.count)
 	
-	// Compute all product of everything to the left of `i`
 	for i in 1 ..< input.count {
+		// Compute all product of everything to the left of `i`
 		left[i] = left[i - 1] * input[i - 1]
-	}
-	
-	// Compute all product of everything to the right of `i`
-	for i in (0 ... input.count - 2).reversed() {
-		right[i] = right[i + 1] * input[i + 1]
+		
+		// Compute all product of everything to the right of `rightIndex`
+		let rightIndex = input.count - i - 1
+		right[rightIndex] = right[rightIndex + 1] * input[rightIndex + 1]
 	}
 	
 	// Left * Right

@@ -12,7 +12,10 @@ Bonus: Can you do this in one pass?
 
 extension Array where Element == Int {
 
-	// Complexity: O(n)
+	/**
+	Use a hash set to cache the number we have seen. Then whenever we see a new
+	number, check whether the difference of it (Target) already in the hash set.
+	*/
 	func hasSumEqual(to k: Int) -> Bool {
 		
 		var cache = Set<Int>()
