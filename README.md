@@ -36,16 +36,20 @@ Given the root to a binary tree, implement serialize(root), which serializes the
 
 For example, given the following Node class
 
-	class Node:
-		def __init__(self, val, left=None, right=None):
-			self.val = val
-			self.left = left
-			self.right = right
+```python
+class Node:
+	def __init__(self, val, left=None, right=None):
+		self.val = val
+		self.left = left
+		self.right = right
+```
 
 The following test should pass:
 
+```python
 	node = Node('root', Node('left', Node('left.left')), Node('right'))
 	assert deserialize(serialize(node)).left.left.val == 'left.left'
+```
 
 ### Solution
 
@@ -57,11 +61,12 @@ The following test should pass:
 cons(a, b) constructs a pair, and car(pair) and cdr(pair) returns the first and last element of that pair. For example, car(cons(3, 4)) returns 3, and cdr(cons(3, 4)) returns 4.
 
 Given this implementation of cons:
+
 ```python
-	def cons(a, b):
-		def pair(f):
-			return f(a, b)
-		return pair
+def cons(a, b):
+	def pair(f):
+		return f(a, b)
+	return pair
 ```
 
 Implement car and cdr.
