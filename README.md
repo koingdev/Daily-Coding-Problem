@@ -50,3 +50,22 @@ The following test should pass:
 ### Solution
 
 [SerializeBinaryTree.Swift](Solutions/Problem3/SerializeBinaryTree.swift)
+
+## Problem 5
+> This problem was asked by Jane Street.
+
+cons(a, b) constructs a pair, and car(pair) and cdr(pair) returns the first and last element of that pair. For example, car(cons(3, 4)) returns 3, and cdr(cons(3, 4)) returns 4.
+
+Given this implementation of cons:
+```python
+	def cons(a, b):
+		def pair(f):
+			return f(a, b)
+		return pair
+```
+
+Implement car and cdr.
+
+### Solution
+
+[ConstructPair.Swift](Solutions/Problem5/ConstructPair.swift)
